@@ -1,29 +1,25 @@
 <template>
-    <div class="headerContainer">
-        <div class="navContainer">
-                <NuxtLink to="/"><h1>Home page</h1></NuxtLink>
-                <NuxtLink to="/"><h1>About</h1></NuxtLink>
-                <NuxtLink to="/"><h1>Partners</h1></NuxtLink>
-        </div>
-
-        <div class="alert alert-primary" role="alert">
-  This is a primary alert—check it out!
-</div>
-    </div>
+        <ul class="nav">
+                <li><NuxtLink to="/">Home</NuxtLink></li>
+                <li><NuxtLink to="/productpage">Product Page</NuxtLink></li>
+                <li><NuxtLink to="/producerapplication">Partners</NuxtLink></li>
+                <li>Affiliates</li>
+        </ul>
 </template>
 
 <style>
-.headerContainer {
-    width: 100%;
-    margin: auto;
-    background-color: purple;
-}
-.navContainer {
-    width: 60%;
-    background-color: gray;
-    margin: auto;
-}
-
-
+    .nav{
+        background-color: aquamarine;
+        text-align: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .nav li{
+        display: inline-block;
+        padding: 20px;
+        font-size: 20px;
+    }
+    
 
 </style>
