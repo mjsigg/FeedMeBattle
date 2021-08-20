@@ -33,10 +33,18 @@
         
     </div>
         <article class="sidebar-parent">
-            <section class="sidebar"><h3>yo man testing this shit out</h3></section>
-                <p class="sidebar-remainder">Sidebar remainder</p>
+            <section class="sidebar">
+                <h3>Menu items</h3>
+                <p>beef rendang</p>
+                <p>galngal</p>
+                ginger
+            </section>
+                <section class="sidebar-remainder">
+                    Try to fit the menu here
+                </section>
         </article>
 </div>
+
 </template>
 
 <script>
