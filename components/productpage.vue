@@ -1,29 +1,42 @@
 <template>
+
+<div>
     <div class="parent">
-        <title>Phat Eatery</title>
-        <header class="header">
-           <h2 class="company-name">Phat Eatery</h2>
+
+        <header>
+            <h2 class="company-name">Phat Eatery || Insert Logo here</h2>
         </header>
-        <div class="left-side-main" contenteditable>Left Sidebar</div>
 
-        <main class="middle-main" contenteditable> 
-            <div class="ram-layout">
-                <div class>Free merchandise on Friday's!
-                    <p>Throughout the month Septemember we are giving out free merch to the first 10 veterans that show their ID.  Thank you for your service!</p>
-                </div>
+        <article class="left-side-main" contenteditable>
+            <section>
+                Left Sidebar || Tons of discounts throughout the month of November!
+            </section>
+        </article>
 
-                <div>
-                    <p>Our countdown to Veteran's Day kicks off in the beginning of September with a 10% discount on appetizers, a free drink, and 5% match of total to Combined Arms!</p>
-                </div>
-                <div class>3</div>
-                <div class>4</div>
-            </div>
-        </main>
-    
-        <div class="right-side-main" contenteditable>Right Sidebar</div>
-        <footer class="footer">Footer</footer>
-          
+        <article class="middle-main" contenteditable>
+            <section> 
+                Right Sidebar
+                Main Column|| Free merch to the first 50 veterans!  Bring ID!
+            </section>
+        </article>
+
+        <article class="right-side-main" contenteditable>
+            <section> 
+                Right Sidebar
+                RightSidebar || TESTING THIS BADBOY OUT SON!!!!!!!!!!!!!!!!!!
+            </section>
+        </article>
+
+        <footer class="footer">
+            <section>Keeping this in now as a placeholder.  Might need some sort of gap fpr spacing?</section>
+        </footer>
+        
     </div>
+        <article class="sidebar-parent">
+            <section class="sidebar"><h3>yo man testing this shit out</h3></section>
+                <p class="sidebar-remainder">Sidebar remainder</p>
+        </article>
+</div>
 </template>
 
 <script>
@@ -33,46 +46,63 @@ export default {
 </script>
 
 <style>
-  .parent {
-    display: grid;
-    grid-template-columns: auto 1fr auto / auto 1fr auto;
-  }
-  
-  .header {
+
+  header {
     grid-column: 1/4;
     padding: 2rem;
     background-color: brown;
   }
 
-  .left-side-main{
+  .company-name{
+    background-color: yellowgreen;
+    text-align: center;   
+  }
+
+  .parent {
+    display: grid;
+    grid-template-columns: auto 1fr auto / auto 1fr auto;
+  }
+  
+  .left-side-main {
     grid-column: 1 / 2;
     background-color: yellow;
   }
 
   .middle-main {
-    grid-column: 2/3;
+    grid-column: 2 / 3;
     background-color: grey;
   }
 
   .right-side-main {
-    grid-column: 3/4;
+    grid-column: 3 / 4;
     background-color: red;
   }
 
-  .footer{
+  footer{
     grid-column: 1 / 4;
-    background-color: green;
+    background-color: turquoise;
   }
 
-  .company-name{
-    background-color: yellowgreen;
-    text-align: center;
-      
+  .sidebar-parent{
+  display: grid;
+  grid-template-columns: minmax(150px, 65%) 1fr;
+  padding: 0;
+  margin: 0;
+}
+
+  .sidebar {
+  height: 100vh;
+  background: lightpink;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.sidebar-remainder{
+  grid-template-columns: minmax(150px, 65%) 1fr;
+  padding: 0;
+  margin: 0;
+  background-color: gray;
   }
-  .ram-layout {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
+
 
 </style>
