@@ -2,8 +2,6 @@
     <div>
         <Nav /> 
         <producerapplication />
-        <div class="alert alert-primary" role="alert">
-</div>
     </div>
 </template>
 

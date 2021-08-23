@@ -1,35 +1,35 @@
 <template>
 
 <div>
-    <div class="parent">
 
+    <div class="parent">
         <header>
-            <h2 class="company-name">Phat Eatery || Insert Logo here</h2>
+            <h2 class="company-name">
+                {{companyName}} <img src="phat eatery logo.jpeg" alt="Company Logo">
+            </h2>
         </header>
 
-        <article class="left-side-main" contenteditable>
+        <article class="left-side-main section-padding" contenteditable>
             <section>
                 Left Sidebar || Tons of discounts throughout the month of November!
             </section>
         </article>
 
-        <article class="middle-main" contenteditable>
+        <article class="middle-main section-padding" contenteditable>
             <section> 
-                Right Sidebar
+                Middle Sidebar
                 Main Column|| Free merch to the first 50 veterans!  Bring ID!
             </section>
         </article>
 
-        <article class="right-side-main" contenteditable>
+        <article class="right-side-main section-padding" contenteditable>
             <section> 
                 Right Sidebar
                 RightSidebar || TESTING THIS BADBOY OUT SON!!!!!!!!!!!!!!!!!!
             </section>
         </article>
 
-        <footer class="footer">
-            <section>Keeping this in now as a placeholder.  Might need some sort of gap fpr spacing?</section>
-        </footer>
+
         
     </div>
         <article class="sidebar-parent">
@@ -40,7 +40,14 @@
                 ginger
             </section>
                 <section class="sidebar-remainder">
-                    Try to fit the menu here
+    <client-only>
+        <vue-pdf class='' :src="src" :page="1" @num-pages="pdfPageCount = $event"></vue-pdf>
+        <div v-if="pdfPageCount > 1">
+            <div v-for="(pageNum, index) in pdfPageCount " :key="index">
+                <vue-pdf class="your-pdf-class" :src="src" :page="pageNum" v-if="pageNum > 1"></vue-pdf>
+            </div>
+        </div>
+    </client-only>
                 </section>
         </article>
 </div>
@@ -48,8 +55,21 @@
 </template>
 
 <script>
-export default {
 
+export default {
+        components: {
+        pdf
+    },
+
+    data() {
+        return {
+            companyName: 'Phat Eatery',
+            companyLogo: 'Phat Eatery Logo.jpeg',
+            menuPDF: 'phat-menu.pdf',
+            src: 'https://img1.wsimg.com/blobby/go/cc9b23cf-8ed7-4c72-a7ab-7ac80deb140d/downloads/7-10%20Dinner.pdf?ver=1629149791217',
+            pdfPageCount: 0,
+		}
+	},
 }
 </script>
 
@@ -74,6 +94,10 @@ export default {
   .left-side-main {
     grid-column: 1 / 2;
     background-color: yellow;
+  }
+
+  .section-padding {
+      padding: 2rem;
   }
 
   .middle-main {

@@ -25,12 +25,12 @@
         </div>
         </form>
 
-    <p> {{contactName}}</p>
     </div>
 </template>
 
 <script>
 export default {
+    
     
 }
 </script>
